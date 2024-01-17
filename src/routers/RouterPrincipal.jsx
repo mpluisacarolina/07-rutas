@@ -14,17 +14,26 @@ export const RouterPrincipal = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/Index" >Index</NavLink>
+            <NavLink
+              to="/Index"
+              className={({ isActive }) => isActive ? "activado" : ""} >Index
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/Articulos" >Artículos</NavLink>
+            <NavLink
+              to="/Articulos"
+              className={({ isActive }) => isActive ? "activado" : ""} >Artículos
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/Contacto" >Contacto</NavLink>
+            <NavLink
+              to="/Contacto"
+              className={({ isActive }) => isActive ? "activado" : ""} >Contacto
+            </NavLink>
           </li>
         </ul>
       </nav>
-
+      <hr />
       <section className="contenido-principal">
         <Routes>
           <Route path="/" element={<Index />} />
@@ -34,13 +43,10 @@ export const RouterPrincipal = () => {
           <Route path="*" element={<Error />} />
         </Routes>
       </section>
-
-
       <hr />
       <footer>
         Este es el pie de Página
       </footer>
-
     </BrowserRouter>
   )
 }
