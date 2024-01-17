@@ -3,6 +3,7 @@ import { Route, Routes, BrowserRouter, NavLink } from 'react-router-dom';
 import { Index } from '../components/Index';
 import { Contacto } from '../components/Contacto';
 import { Articulos } from '../components/Articulos';
+import { Persona } from '../components/Persona';
 import { Error } from '../components/Error'
 
 export const RouterPrincipal = () => {
@@ -40,6 +41,7 @@ export const RouterPrincipal = () => {
           <Route path="index" element={<Index />} />
           <Route path="contacto" element={<Contacto />} />
           <Route path="articulos" element={<Articulos />} />
+          <Route path="persona/:nombre/:apellido" element={<Persona />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </section>
